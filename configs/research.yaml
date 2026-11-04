@@ -1,0 +1,9 @@
+# Initial data contract settings. Keep provider and universe choices explicit.
+universe_file: configs/universe.json
+universe_schema_version: 1
+price_data:
+  provider: yahoo_finance
+  interval: 1d
+  auto_adjust: false
+  exchange_timezone: America/New_York
+  normalized_schema_version: 1

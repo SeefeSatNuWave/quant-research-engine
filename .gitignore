@@ -1,0 +1,13 @@
+# Downloaded or generated market data and research output
+data/
+reports/
+*.log
+
+# Python tooling
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://quant-research-engine.local/schemas/universe-v1.json",
+  "title": "Quant Research Engine universe, version 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "securities"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "securities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["symbol", "name", "industry", "valid_from", "source", "rationale"],
+        "properties": {
+          "symbol": {"type": "string", "pattern": "^[A-Z][A-Z0-9.-]{0,9}$"},
+          "name": {"type": "string", "minLength": 1},
+          "industry": {"type": "string", "minLength": 1},
+          "valid_from": {"type": "string", "format": "date"},
+          "valid_to": {"type": ["string", "null"], "format": "date"},
+          "source": {"type": "string", "minLength": 1},
+          "rationale": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}
