@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "screen_id": "user_scanner_without_industry_v1",
+  "status": "specification_only_not_connected_to_runner",
+  "source_file": "stock_scanner.py",
+  "source_sha256": "152a11f3820298a6cfced21f0d5fc0ca8e99b2093c63510bf4a204d277c7245f",
+  "combination": "all",
+  "criteria": [
+    {
+      "id": "above_sma50",
+      "left": "latest_completed_session_close",
+      "operator": ">",
+      "right": "sma_50_completed_sessions_including_latest"
+    },
+    {
+      "id": "above_quarter_open",
+      "left": "latest_completed_session_close",
+      "operator": ">",
+      "right": "first_session_open_of_current_calendar_quarter"
+    },
+    {
+      "id": "positive_revenue_growth",
+      "left": "latest_available_quarter_revenue_yoy_pct",
+      "operator": ">",
+      "right": 0
+    },
+    {
+      "id": "last_reported_quarter_eps_beat",
+      "left": "100_times_actual_minus_estimate_divided_by_abs_estimate",
+      "operator": ">",
+      "right": 0,
+      "requires_nonzero_estimate_in_original": true
+    },
+    {
+      "id": "peg_below_one",
+      "left": "peg",
+      "operator": "<",
+      "right": 1.0,
+      "original_requires_positive_peg": false
+    }
+  ],
+  "original_history_requirement": {"minimum_rows": 55, "sma_sessions": 50},
+  "candidate_pool": {
+    "original_sources": ["S&P 500", "Nasdaq-100"],
+    "deduplicate_symbols": true,
+    "historical_use_requires_effective_dated_membership": true,
+    "maximum_selected_count": null,
+    "ranking_to_select_100": null
+  },
+  "industry_policy": "defer_to_project_dynamic_industry_rotation_definition",
+  "excluded_original_components": [
+    "fixed_industry_buckets",
+    "ai_quantum_business_summary_keyword_gate",
+    "industry_curated_supplemental_tickers"
+  ],
+  "research_use": {
+    "role": "separately_reported_stock_screen_variant",
+    "restrict_general_earnings_comparison_sample": false,
+    "historical_use_requires_verified_availability_times": true,
+    "current_snapshots_must_not_be_backdated": true
+  }
+}

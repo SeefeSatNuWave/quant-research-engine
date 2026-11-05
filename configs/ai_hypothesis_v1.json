@@ -1,0 +1,11 @@
+{
+  "hypothesis": "AI-related companies more frequently outperform SPY before earnings and underperform SPY afterward than the comparison sample.",
+  "defined_before_new_downloads": true,
+  "ai_related": ["AAPL", "MSFT", "NVDA", "AMD", "AVGO", "ORCL", "GOOGL", "AMZN"],
+  "comparison": ["JPM", "JNJ", "XOM", "PG", "CAT", "NEE", "AMT", "DIS"],
+  "classification": "Manual present-day AI exposure hypothesis: chips, cloud, enterprise AI and consumer AI platforms. Broad subjective cohort, not historical industry membership; Apple is a broad-exposure inclusion. Comparison companies may also use AI.",
+  "period": "2023-2025",
+  "primary_measure": "Fraction of paired events with pre_runup excess_return > 0 AND post_event excess_return < 0",
+  "secondary_measures": ["mean excess returns", "median excess returns", "paired pattern by year", "raw stock-return paired pattern"],
+  "status": "Exploratory same-period follow-up after inspecting original pilot; no confirmatory significance claims or untouched holdout. No parameter tuning."
+}

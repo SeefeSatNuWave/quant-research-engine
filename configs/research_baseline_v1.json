@@ -1,0 +1,15 @@
+{
+  "id": "research_baseline_v1",
+  "formation_start": "2023-01-01",
+  "formation_end": "2026-02-01",
+  "evaluation_start": "2026-02-01",
+  "evaluation_end_exclusive": "2026-11-01",
+  "note": "Freeze before retrieving evaluation prices. 2023-2025 was already explored. 2026 February-October is a one-shot evaluation, no longer untouched after this run.",
+  "earnings": {"symbols": ["AAPL", "MSFT", "NVDA", "AMD", "AVGO", "ORCL", "GOOGL", "AMZN"], "direction": -1, "holding_sessions": 5, "timing": "Conservative next regular close strictly after the entire reported calendar date; no pre-event trading without historical scheduled-date availability."},
+  "pairs": {"candidates": [["NVDA", "AMD"], ["MSFT", "ORCL"], ["GOOGL", "AMZN"], ["AAPL", "MSFT"]], "entry_z": 2.0, "exit_z": 0.5, "stop_z": 4.0, "max_holding_sessions": 20, "fdr": 0.05, "max_beta_half_change": 0.5, "hedge": "formation log-price OLS beta; daily dollar weights proportional to 1 and minus beta, gross exposure capped at 1"},
+  "cost_bps_each_side": [5, 10, 20],
+  "borrow_annual": 0.05,
+  "financing_annual": 0.0,
+  "short_availability": "Assumed for research only; no historical locates available",
+  "risk_free_annual": 0.0
+}

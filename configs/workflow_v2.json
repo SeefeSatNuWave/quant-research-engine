@@ -1,0 +1,16 @@
+{
+  "id": "workflow_v2",
+  "policy": "Fixed retrospective walk-forward validation of existing rules, not a fresh holdout; all periods have previously been inspected. No parameter search.",
+  "formation_start": "2023-01-01",
+  "folds": [
+    {"id": "2025_h1", "start": "2025-01-01", "end": "2025-07-01"},
+    {"id": "2025_h2", "start": "2025-07-01", "end": "2026-01-01"},
+    {"id": "2026_feb_may", "start": "2026-02-01", "end": "2026-06-01"},
+    {"id": "2026_jun_oct", "start": "2026-06-01", "end": "2026-11-01"}
+  ],
+  "fold_boundary_policy": "Liquidate at last close of each fold, restart flat; no P&L carried over gaps. Formation expands from 2023. First signal uses first evaluation close and fills at the next close.",
+  "base_config": "configs/research_baseline_v1.json",
+  "cost_model": "Self-financing target weights after costs; one-way total bps split into 1 bp fees, 2 bp half-spread and remaining slippage. Borrow 5% actual calendar days/365; cash earns zero.",
+  "earnings_timing_policy": "Only source-supported release sessions may enter audited path. Scheduled dates alone do not verify actual publication. Unreviewed/conflicting/ambiguous events explicitly excluded. Exact timestamps not inferred.",
+  "performance_inference": "Descriptive only; no performance p-values or confidence intervals from dependent small samples. Engle-Granger raw and BH values retained for every candidate/fold; global BH diagnostic also reported."
+}

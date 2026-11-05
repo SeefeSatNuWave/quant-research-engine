@@ -1,7 +1,14 @@
 # Downloaded or generated market data and research output
-data/
+/data/
 reports/
 *.log
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
 
 # Python tooling
 .venv/

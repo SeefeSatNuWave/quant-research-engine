@@ -1,0 +1,12 @@
+{
+  "scope": "All research families implemented in this conversation; no automated parameter optimization was performed.",
+  "experiments": [
+    {"id":"apple_pilot", "family":"single-event descriptive wiring check", "windows":3, "selection":"manual January 2025 Apple event", "status":"exploratory vendor timing"},
+    {"id":"pilot_v1", "config":"configs/pilot_v1.json", "tickers":10, "events":120, "windows_per_event":3, "status":"exploratory vendor timing; superseded for verified use"},
+    {"id":"consistency_v1", "parent":"pilot_v1", "ticker_window_combinations":30, "annual_cells":90, "methods":["positive-excess counts","median","mean","single largest absolute-move exclusion diagnostic"], "status":"post-hoc same-sample descriptive follow-up"},
+    {"id":"ai_pilot_v1", "config":"configs/ai_hypothesis_v1.json", "tickers":16, "events":192, "cohorts":2, "windows_per_event":3, "status":"hypothesis prompted by original sample; no confirmatory claim"},
+    {"id":"research_baseline_v1", "config":"configs/research_baseline_v1.json", "pairs_tested":4, "earnings_variants":1, "cost_scenarios":3, "status":"conditional timing, shorts assumed available; evaluation consumed"},
+    {"id":"workflow_v2", "config":"configs/workflow_v2.json", "candidate_pairs":4, "folds":4, "pair_tests":16, "cost_scenarios":3, "earnings_variants":1, "status":"retrospective walk-forward; strict source-supported timing gate; no fresh holdout"}
+  ],
+  "inference": "Pair BH selection families comprise four candidates per fold, plus global sixteen-test BH diagnostic. Prior four-test family separately retained. These are repeated, dependent searches; none passed and no significance-based performance claim is made. All return analyses are descriptive. No bootstrap or Monte Carlo."
+}

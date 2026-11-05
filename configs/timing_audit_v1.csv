@@ -1,0 +1,4 @@
+symbol,reported_date,vendor_label,source_evidence,status,source_url
+MSFT,2023-07-25,pre-market,Company scheduled after market close,conflicts_with_company_schedule,https://news.microsoft.com/source/2023/07/11/microsoft-announces-quarterly-earnings-release-date-56/
+NEE,2025-04-23,post-market,Company release available at 07:30 ET,conflicts_with_company_release,https://www.sec.gov/Archives/edgar/data/37634/000075330825000021/neeq12025exhibit99.htm
+XOM,2024-04-26,post-market,Company scheduled morning results call; exact release timestamp not verified,requires_release_verification,https://investor.exxonmobil.com/company-information/press-releases/detail/1160/exxonmobil-to-release-first-quarter-2024-financial-results
